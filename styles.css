@@ -1,0 +1,46 @@
+body {
+    display: flex;
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    animation: bgMove 3s infinite alternate ease;
+}
+@keyframes bgMove {
+    0% {
+        background-color: #000000;
+    }
+    100% {
+        background-color: #6e6e6e;
+    }
+}
+
+.box {
+    background-color: #000000;
+    padding: 50px;
+    border-radius: 5px;
+    border: 1px solid #fff;
+}
+button {
+    margin-top: 8px;
+    margin-left: 18px;
+    width: 200px;
+    height: 25px;
+    border: 2px solid #fafad2;
+    border-radius: 5px;
+    cursor: pointer;
+}
+button:hover{
+    background-color: #000000;
+    color: #fff;
+}
+input {
+    text-align: center;
+    margin-top: 9px;
+    width: 230px;
+    height: 25px;
+}
+.button1:active, .button2:active {
+    transform: scale(1.1);
+    transition: transform 0.1s ease;
+}
