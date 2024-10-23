@@ -16,6 +16,7 @@ body {
 }
 
 .box {
+    poisition: relative;
     background-color: #000000;
     padding: 50px;
     border-radius: 5px;
