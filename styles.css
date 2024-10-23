@@ -44,13 +44,26 @@ input {
     transform: scale(1.1);
     transition: transform 0.1s ease;
 }
+@media (max-width: 768px) {
+    .box {
+        padding: 30px; /* Giảm kích thước padding cho màn hình nhỏ hơn */
+    }
 
-/* Media Query cho màn hình rất nhỏ (dưới 480px) */
+    button, input {
+        width: 100%; /* Đặt width 100% để chiếm hết chiều ngang */
+        margin-left: 0; /* Xóa margin trái để căn giữa */
+    }
+}
+
+/* Màn hình từ 480px trở xuống (điện thoại di động) */
 @media (max-width: 480px) {
     .box {
-        width: 90%; /* Đảm bảo box chiếm phần lớn không gian màn hình nhỏ */
+        padding: 20px; /* Giảm thêm padding */
     }
 
-    input[type="text"], input[type="password"], button {
-        font-size: 14px; /* Thu nhỏ font để vừa màn hình */
+    button, input {
+        width: 100%; /* Chiều rộng full màn hình */
+        height: 35px; /* Giảm chiều cao cho các button và input */
+        font-size: 14px; /* Giảm kích thước chữ */
     }
+}
