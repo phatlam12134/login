@@ -44,3 +44,18 @@ input {
     transform: scale(1.1);
     transition: transform 0.1s ease;
 }
+@media (max-width: 768px) {
+    .box {
+        width: 80%; /* Điều chỉnh chiều rộng theo tỷ lệ */
+    }
+}
+
+/* Media Query cho màn hình rất nhỏ (dưới 480px) */
+@media (max-width: 480px) {
+    .box {
+        width: 90%; /* Đảm bảo box chiếm phần lớn không gian màn hình nhỏ */
+    }
+
+    input[type="text"], input[type="password"], button {
+        font-size: 14px; /* Thu nhỏ font để vừa màn hình */
+    }
