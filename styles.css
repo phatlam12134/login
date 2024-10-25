@@ -1,0 +1,95 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    animation: bgMove 3s infinite alternate ease;
+}
+@keyframes bgMove {
+    0% {
+        background-color: #000000;
+    }
+    100% {
+        background-color: #787878;
+    }
+}
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    padding:50px;
+    width: 200px;
+    background: linear-gradient(to bottom, #000000, #fff);
+    animation: boxMove 3s infinite ease;
+}
+@keyframes boxMove {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+button {
+    width: 110px;
+    margin-top: 8px;
+    height: 25px;
+    border: 2px solid #ffffff;
+    border-radius: 5px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+.btall {
+    display: flex;
+    justify-self: unset;
+    gap: 20px;
+}
+button:hover{
+    background-color: #000000;
+    color: #fff;
+}
+input {
+    border: 2px solid #fff;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 9px;
+    width: 230px;
+    height: 25px;
+}
+.button1:active, .button2:active {
+    transform: scale(1.1);
+    transition: transform 0.1s ease;
+}
+@media (max-width: 768px) {
+    .box {
+        padding: 30px; /* Giảm kích thước padding cho màn hình nhỏ hơn */
+    }
+
+    button, input {
+        width: 100%; /* Đặt width 100% để chiếm hết chiều ngang */
+        margin-left: 0; /* Xóa margin trái để căn giữa */
+    }
+}
+
+/* Màn hình từ 480px trở xuống (điện thoại di động) */
+@media (max-width: 480px) {
+    .box {
+        padding: 20px; /* Giảm thêm padding */
+    }
+
+    button, input {
+        width: 100%; /* Chiều rộng full màn hình */
+        height: 35px; /* Giảm chiều cao cho các button và input */
+        font-size: 14px; /* Giảm kích thước chữ */
+    }
+}
+.button {
+    display: flex;
+}
